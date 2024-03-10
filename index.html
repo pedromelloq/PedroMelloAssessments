@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Pedro's Website</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon.ico" type="images/ico">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-  <header class="header">
-    <a href="index.html" class="logo">Pedro.</a>
-
-    <nav class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="assessments.html">Assessments</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+    <title>Home | 18567</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="index.html">Pedro | 18567</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assessments.html">Assessments</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
-  <section class="home">
-    <div class="home-content">
-        <h1>Hi, I'm Pedro Mello</h1>
-        <h3>IT Student and Future Programmer</h3>
-        <p>Discover more about me and my current and future projects.</p>
-        <div class="btn-box">
-            <a href="assessments.html">Assessments</a>
-            <a href="projects.html">Projects</a>
-        </div>        
-    </div>
-
-    <div class="home-sci">
-        <a href="https://www.instagram.com/pedromelloq/" target="_blank"><i class='bx bxl-instagram'></i></a>
-        <a href="https://github.com/pedromelloq" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/pedromelloq/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-    </div>
-</section>
-</body>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Pedro<br />a</span> IT Student
+          </h1>
+          <p class="description">
+            Welcome to my website! I'm Pedro Mello, a IT student and Future Developer.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me"><a href="assessments.html">Assessments</a></button>
+            <button class="portfolio"><a href="contact.html">Contact</a></button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/profile.jpg" alt="profile" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>Pedro Mello | Student ID:18567</footer>
 </html>
