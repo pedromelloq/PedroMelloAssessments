@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" href="images/favicon.ico" type="images/ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8e8ca243a3.js" crossorigin="anonymous"></script>
+    <title>Contact | 18567</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="index.html">Pedro | 18567</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assessments.html">Assessments</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="contact">
+        <h2>Contact</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send me a message</h3>
+                    <form name="submit-to-google-sheet">
+                        <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <input name="email" placeholder="Your Email"></input>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit">Send</button>
+                    </div>
+                    <button><a href="https://docs.google.com/spreadsheets/d/179bIbuwNDTd72VSdBz0bs4IWagSH43SzDAIWUs81EYM/edit#gid=0" target="_blank">Google Sheets</a></button>
+                </form> 
+                <span id="msg"></span>
+            </div>
+            <div class="contact-info">
+                <h3> Information</h3>
+                <p><i class="fas fa-phone"></i>+61 0414108505</p>
+                <p><i class="fas fa-envelope"></i>pedromedeirosmello@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i>Sussex St, Sydney, Australia</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyY0YOEf0i7PA74mA3THulfLimvyeuOwlVX_G5RSEDTEO-PvAeVrLxL7d2ZSZHFYp0h/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank You For Your Message!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+        })
+  </script>
+</body>
+</html>
